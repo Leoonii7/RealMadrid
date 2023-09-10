@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Method Selection</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .card-details,
+        .cash-details,
+        .coupon-details {
+            display: none;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Payment Method</h1>
+        <form id="payment-form" method="POST" action="">
+            <div class="form-group">
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="cash">Cash</option>
+                    <option value="card">Visa/MasterCard</option>
+                </select>
+            </div>
+            <div class="card-details">
+                <h2>Card Payment Details</h2>
+                <div class="form-group">
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+                </div>
+                <div class="form-group">
+                    <label for="expiration-date">Expiration Date:</label>
+                    <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YY">
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="123">
+                </div>
+                <div class="form-group">
+                    <label for="name">Cardholder Name:</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe">
+                </div>
+            </div>
+            <div class="cash-details">
+                <h2>Cash Payment Details</h2>
+                <div class="form-group">
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" placeholder="123 Main Street">
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Telephone Number:</label>
+                    <input type="text" id="telephone" name="telephone" placeholder="(555) 123-4567">
+                </div>
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <input type="text" id="country" name="country" placeholder="United States">
+                </div>
+                <div class="form-group">
+                    <label for="postal-code">Postal Code:</label>
+                    <input type="text" id="postal-code" name="postal-code" placeholder="12345">
+                </div>
+            </div>
+            <div class="coupon-details">
+                <h2>Discount Code</h2>
+                <div class="form-group">
+                    <label for="discount-code">Enter Discount Code:</label>
+                    <input type="text" id="discount-code" name="discount-code" placeholder="Enter your discount code">
+                    <button type="button" id="apply-discount">Apply Discount</button>
+                </div>
+            </div>
+            <div class="total">
+                <h2>Total Amount: $<span id="total-amount">100.00</span></h2>
+                </div>
+            <button type="submit">Pay Now</button>
+        </form>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const paymentMethodSelect = document.getElementById("payment-method");
+            const cardDetails = document.querySelector(".card-details");
+            const cashDetails = document.querySelector(".cash-details");
+            const couponDetails = document.querySelector(".coupon-details");
+            const applyDiscountButton = document.getElementById("apply-discount");
+            const totalAmountSpan = document.getElementById("total-amount");
+
+            applyDiscountButton.addEventListener("click", function () {
+                const discountCodeInput = document.getElementById("discount-code");
+                const discountCode = discountCodeInput.value;
+
+                // Replace this with your actual discount calculation logic.
+                // For example, let's assume a 10% discount for the code "DISCOUNT10".
+                if (discountCode === "DISCOUNT10") {
+                    const currentTotal = parseFloat(totalAmountSpan.textContent);
+                    const discountedAmount = currentTotal * 0.1;
+                    const newTotal = currentTotal - discountedAmount;
+                    totalAmountSpan.textContent = newTotal.toFixed(2);
+                }
+            });
+
+            paymentMethodSelect.addEventListener("change", function () {
+                const selectedPaymentMethod = paymentMethodSelect.value;
+                if (selectedPaymentMethod === "card") {
+                    cardDetails.style.display = "block";
+                    cashDetails.style.display = "none";
+                    couponDetails.style.display = "block";
+                } else if (selectedPaymentMethod === "cash") {
+                    cardDetails.style.display = "none";
+                    cashDetails.style.display = "block";
+                    couponDetails.style.display = "none";
+                }
+            });
+
+            // Read the total bill parameter from the URL
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const totalBill = urlParams.get("total");
+
+            // Display the total bill on the payment page
+            if (totalBill !== null) {
+                totalAmountSpan.textContent = `$${totalBill}`;
+            }
+        });
+    </script>
+</body>
+</html>

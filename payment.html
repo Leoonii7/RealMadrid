@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #0d1440;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ticket {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.ticket img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.ticket-details {
+  flex: 1;
+}
+
+.ticket h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.ticket p {
+  margin: 10px 0;
+  color: #666;
+}
+
+form {
+  margin-top: 10px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+form .buy-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0d1440;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form .buy-button:hover {
+  background-color: #1b2169;
+}
+
+</style>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Madrid Ticket Purchase</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Real Madrid Tickets</h1>
+  </header>
+  <main>
+    <div class="ticket">
+      <img src="match_ticket.jpg" alt="Match Ticket">
+      <div class="ticket-details">
+        <h3>Match Ticket</h3>
+        <p>Experience the excitement of a live Real Madrid match at Santiago Bernabéu Stadium.</p>
+        <p>Date: October 15, 2023</p>
+        <p>Venue: Santiago Bernabéu Stadium</p>
+        <p>Price: $75</p>
+        <form action="process_payment.php" method="post">
+          <input type="hidden" name="ticket_type" value="match">
+          <label for="card_number">Card Number:</label>
+          <input type="text" id="card_number" name="card_number" required>
+          <label for="expiry_date">Expiry Date:</label>
+          <input type="text" id="expiry_date" name="expiry_date" required>
+          <label for="cvv">CVV:</label>
+          <input type="text" id="cvv" name="cvv" required>
+          <button type="submit" class="buy-button">Buy Now</button>
+        </form>
+      </div>
+    </div>
+    <!-- More tickets can be added here -->
+  </main>
+</body>
+</html>

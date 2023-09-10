@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Madrid Homepage</title>
+<link rel="Website icon" type="png"
+href="./HastaElFinal/twitter-image.png">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+    
+  }
+  header {
+    background-color:white;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Horizontally aligns the logo and the menu */
+    align-items: center;
+  }
+  header img {
+    width: 100px;
+    height: 100px;
+   
+  }
+  h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  main {
+    padding: 20px;
+  }
+  .next-game {
+    background-color: azure;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .next-game h3 {
+    margin-top: 0;
+    font-size: 25px;
+    color: #333;
+  }
+  .next-game p {
+    margin: 10px 0;
+    color: #555;
+  }
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display the menu items in a row */
+  }
+  .menu li {
+    margin: 0 15px; /* Add spacing between menu items */
+  }
+  .menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  .menu a:hover {
+    color: grey;
+  }
+  .news-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.news-item {
+  width: 50%; /* Each news item takes half the width */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-item img {
+  width: 85%;
+  height: auto;
+  height: 100px; /* Set the maximum height for the images */
+}
+
+.news-item h3, .news-item p {
+  margin: 10px 0;
+}
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100px; /* Adjust the width as needed */
+  height: auto;
+  margin-right: 10px; /* Add some space between the images */
+}
+.promotional-banner {
+  background-color:honeydew; /* Set the background color */
+  padding: 20px; /* Add padding for spacing */
+  border-radius: 10px; /* Add rounded corners */
+  text-align: center; /* Center-align the content */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  position: relative; /* Add relative positioning to the container */
+}
+
+.banner-image {
+  position: relative;
+}
+
+.banner-image img {
+  max-width: 100%; /* Ensure the image fits within its container */
+  height: auto;
+  margin-bottom: 10px; /* Add space below the image */
+}
+
+.shop-button {
+  position: absolute;
+  bottom: 70px; /* Position at the bottom */
+  left: 50%; /* Position horizontally in the middle */
+  transform: translateX(-50%); /* Center the button horizontally */
+  background-color: white; /* Button background color */
+  color: black; /* Button text color */
+  padding: 10px 20px; /* Add padding to the button */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Add rounded corners to the button */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold;
+}
+
+.shop-button:hover {
+  background-color:navy; /* Button background color on hover */
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+</style>
+</head>
+<body>
+  <header>
+    
+    <a href="index.html">
+      <img src="./HastaElFinal/twitter-image.png" alt="Real Madrid Logo">
+    </a>
+    
+    <img src="./HastaElFinal/2022-real-madrid-ucl-boh-14-champions-official-player-issue-size-football-soccer-badge-p-6982-p.jpg" alt="Real Madrid Logo">
+
+    
+    <ul class="menu">
+      <li><a href="matches.html">Matches Calendar</a></li>
+      <li><a href="players.html">Players</a></li>
+      <li><a href="standings.html">Standings</a></li>
+      <li><a href="trophies.html">Trophies Room</a></li>
+      <li><a href="basketball.html">Basketball</a></li>
+      <li><a href="membership.html">Madridistas</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      
+  
+
+    </ul>
+  </header>
+  <main>
+    <h2>Welcome to the Official Real Madrid Website!</h2>
+    <p>Stay updated with the latest news, match schedules, and player information.</p>
+    
+    <div class="next-game">
+      <h3>Next Game</h3>
+      <p>Date: September 5, 2023</p>
+      <p>Opponent: Barcelona FC</p>
+      <p>Venue: Santiago Bernabéu Stadium</p>
+      <a href="tickets.html">Get tickets</a>
+    </div>
+    <!-- Add the promotional banner here -->
+<!-- Add this code between the "Next Game" and "Latest News" sections -->
+<div class="promotional-banner">
+  <div class="banner-image">
+    <img src="./trophies/banner.webp" alt="Promotional Banner">
+    <p>Don't miss out on our special offer! Get exclusive Real Madrid merchandise at discounted prices.</p>
+    <a href="shop.html" class="shop-button">Shop Now</a>
+  </div>
+  
+</div>
+
+    <div class="news-section">
+        <h2>Latest News</h2>
+        <div class="news-item">
+          <img src="./HastaElFinal/gettyimages-1240964906.jpg" alt="News Image 1">
+          <h3>Real Madrid Wins Champions League!</h3>
+          <p>Real Madrid secured their 14th Champions League title in a thrilling match against Bayern Munich. The team celebrated their victory at Santiago Bernabéu Stadium.</p>
+        
+        </div>
+        
+        <div class="news-item">
+          <img src="./HastaElFinal/sport-preview-harry-kane-to-real-madrid.webp" alt="News Image 2">
+          <h3>New Signing: Star Striker Joins the Team</h3>
+          <p>Real Madrid has announced the signing of a world-class striker who is expected to strengthen the team's attacking lineup. Fans are eager to see the new player in action.</p>
+
+        </div>
+        <div class="news-item">
+          <img src="./HastaElFinal/7aae642b23445bf969a1c19ed0eb6911cf4827d8.webp" alt="News Image 3">
+          <h3>Zidane Returns as Manager</h3>
+          <p>Zinedine Zidane has made a surprising comeback as the manager of Real Madrid. Fans are excited to see how he leads the team to further successes.</p>
+       
+        </div>
+        
+        <div class="news-item">
+          <img src="./HastaElFinal/gettyimages-1184881218-612x612.jpg" alt="News Image 4">
+          <h3>Record-Breaking Stadium Attendance</h3>
+          <p>The Santiago Bernabéu Stadium witnessed a historic moment with a record-breaking attendance of over 90,000 fans during the recent match against Barcelona.</p>
+         
+        </div>
+        
+        <div class="news-item">
+          <img src="./HastaElFinal/_JT19875Thumb,2.jpg" alt="News Image 5">
+          <h3>Focusing on Youth Development</h3>
+          <p>Real Madrid invests in its youth academy as young talents showcase their potential. The club aims to nurture the next generation of stars.</p>
+       
+        </div>
+        
+        <div class="news-item">
+          <img src="./HastaElFinal/escudo-fundacion-real-madridThumb,7.jpg" alt="News Image 6">
+          <h3>Real Madrid Foundation Initiatives</h3>
+          <p>The Real Madrid Foundation launches new community initiatives to promote education and sports among underprivileged children, exemplifying the club's commitment beyond the field.</p>
+         
+        </div>
+        
+      </div>
+      
+      
+    </main>
+  </main>
+  <footer class="footer">
+    &copy; 2023 Basketball Team. All rights reserved.
+  </footer>
+</body>
+</html>

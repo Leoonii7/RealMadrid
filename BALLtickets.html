@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Madrid Basketball Tickets</title>
+    <style>
+        /* styles.css */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1E3799;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .ticket-form {
+            background-color: #F5F5F5;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color:blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0F1C5F;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1E3799;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Real Madrid Basketball Tickets</h1>
+    </header>
+    
+    <main>
+        <section class="ticket-form">
+            <h2>Buy Tickets</h2>
+          
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="ticket-type">Ticket Type:</label>
+                <select id="ticket-type" name="ticket-type">
+                    <option value="regular">Regular</option>
+                    <option value="vip">VIP</option>
+                </select>
+                
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+                <a href="payment.visa.html"><button>Pay now</button></a>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Real Madrid Basketball</p>
+    </footer>
+</body>
+</html>

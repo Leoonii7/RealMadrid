@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ticket Booking</title>
+  <style>
+    .ticket {
+      display: flex;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    .ticket img {
+     width: 200px;
+      margin-right: 10px;
+    }
+
+    .ticket-details {
+      flex: 1;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #3498db;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .buy-button {
+      display: inline-block;
+      background-color: #3498db;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="ticket">
+    <img src="./HastaElFinal/349-3499178_win-tickets-to-watch-your-favourite-team-in.png" alt="Match Ticket">
+    <div class="ticket-details">
+      <h3>Match Ticket</h3>
+      <p>Experience the excitement of a live Real Madrid match at Santiago Bernabéu Stadium.</p>
+      <p>Date: October 15, 2023</p>
+      <p>Venue: Santiago Bernabéu Stadium</p>
+      <p>Price: $75</p>
+      <label for="matchQuantity">Quantity:</label>
+      <input type="number" id="matchQuantity" value="1" min="1">
+      <a href="payment.visa.html" class="button">Buy Tickets</a>
+    </div>
+  </div>
+
+  <div class="ticket">
+    <img src="./HastaElFinal/1200px-Panoramic_santiago_bernabeu.jpg" alt="Tour Ticket">
+    <div class="ticket-details">
+      <h3>Tour Ticket</h3>
+      <p>Explore the history and glory of Real Madrid with our guided stadium tour.</p>
+      <p>Date: Available daily</p>
+      <p>Duration: 1.5 hours</p>
+      <p>Price: $20</p>
+      <label for="matchQuantity">Quantity:</label>
+      <input type="number" id="matchQuantity" value="1" min="1">
+      <a href="payment.visa.html" class="button">Buy Tickets</a>
+    </div>
+  </div>
+  
+  
+</body>
+</html>

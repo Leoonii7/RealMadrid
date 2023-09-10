@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simulated Payment Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: powderblue;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .payment-container {
+      background-color: whitesmoke;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    .message {
+      display: none;
+      margin-top: 10px;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+
+    /* Additional styles for better form layout */
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #0b3d91;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="payment-container">
+    <h1>Simulated Payment Form</h1>
+    <form id="paymentForm">
+      <label for="cardHolder">Card Holder:</label>
+      <input type="text" id="cardHolder" name="cardHolder" placeholder="Enter your name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Please enter your email" required>
+      
+      
+      <label for="cardNumber">Card Number:</label>
+      <input type="number" id="cardNumber" name="cardNumber" maxlength="19" placeholder="Enter card number" required>
+      
+      <label for="expiry">Expiry Date:</label>
+      <input type="text" id="expiry" name="expiry" maxlength="5" placeholder="MM/YY" required>
+      
+      <label for="cvc">CVC:</label>
+      <input type="number" id="cvc" name="cvc" maxlength="3" placeholder="CVC" required>
+      
+      
+      <button type="submit">Pay Now</button>
+    </form>
+
+    <div id="completionMessage" class="message">
+      Order Completed!
+    </div>
+  </div>
+
+  <script>
+    const paymentForm = document.getElementById('paymentForm');
+    const cardNumberInput = document.getElementById('cardNumber');
+    const expiryInput = document.getElementById('expiry');
+    const cvcInput = document.getElementById('cvc');
+    const completionMessage = document.getElementById('completionMessage');
+
+    paymentForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      if (cardNumberInput.value.length !== 16) {
+        alert('Card number must be 16 digits.');
+        return;
+      }
+
+      const expiryPattern = /^(0[1-9]|1[0-2])\/\d{2}$/;
+      if (!expiryPattern.test(expiryInput.value)) {
+        alert('Expiry date must be in MM/YY format.');
+        return;
+      }
+
+      if (cvcInput.value.length !== 3) {
+        alert('Invalid CVC. Please enter 123.');
+        return;
+      }
+
+      setTimeout(function() {
+        completionMessage.style.display = 'block';
+      }, 1000);
+    });
+    
+  </script>
+</body>
+</html>

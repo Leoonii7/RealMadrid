@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basketball Page</title>
+<style>
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: floralwhite;
+  }
+  header {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header img {
+    width: 100px;
+    height: auto;
+  }
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  .menu li {
+    margin: 0 15px;
+  }
+  .menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  .menu a:hover {
+    color: grey;
+  }
+  .content {
+    padding: 20px;
+  }
+  .news-item {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .news-image {
+    flex: 1;
+    padding: 10px;
+  }
+  .news-image img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  .news-text {
+    flex: 2;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: ivory;
+  }
+  .news-text h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  .news-text p {
+    margin: 10px 0;
+    color: #555;
+  }
+  .news-text a {
+    text-decoration: none;
+    color: #0066cc;
+  }
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  .news-section {
+  display: flex;
+  flex-direction: row;
+}
+.news-item {
+  flex: 1;
+  margin-right: 20px; /* Add some spacing between news items */
+}
+.promotional-banner {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+.banner-image img {
+  max-width: 100%;
+}
+
+.banner-image p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.shop-button {
+  background-color: #0074e4;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.shop-button:hover {
+  background-color: #005ab4;
+}
+
+
+
+
+</style>
+</head>
+<body>
+  <header>
+    <img src="./HastaElFinal/escudo-fundacion-real-madridThumb,7.jpg" alt="Basketball Logo">
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="basketballnews.html">News</a></li>
+      <li><a href="basketballschedules.html">Schedule</a></li>
+      <li><a href="basketballplayers.html">Players</a></li>
+      <li><a href="basketballstandings.html">Standings</a></li>
+    </ul>
+  </header>
+  <div class="next-game">
+    <h3>Next Game</h3>
+    <p>Date: September 5, 2023</p>
+    <p>Opponent: Valencia FC</p>
+    <p>Venue: Wizik Center</p>
+    <a href="BALLtickets.html">Get tickets</a>
+  </div>
+  <div class="promotional-banner">
+    <div class="banner-image">
+      <img src="./BALLplayers/banner.jpg" alt="Real Madrid Basketball Promotional Banner">
+      <p>Don't miss out on our special game! Get exclusive Real Madrid Basketball tickets at discounted prices.</p>
+      <a href="BALLtickets.html" class="shop-button">Get Tickets</a>
+    </div>
+  </div>
+  
+  <div class="content">
+    <div class="news-item">
+      <div class="news-image">
+        <img src="./basketball/image-360860-crop700x700.jpg" alt="News Image">
+      </div>
+      <div class="news-text">
+        <h3>Exciting Victory in Overtime</h3>
+        <p>In a breathtaking display of skill, determination, and unwavering teamwork, the team achieved a heart-pounding victory in overtime against their longstanding rivals. The atmosphere was electric as both teams clashed in a fierce battle for supremacy, each side refusing to yield an inch. With the tension mounting and the clock ticking down, the team dug deep into their reserves of strength and resilience. Every pass, every shot, and every defensive maneuver was executed with precision and a burning desire to come out on top. As the game entered its nail-biting overtime period, the team's unity and strategic prowess shone brilliantly. Finally, in a moment that will be etched into the annals of sports history, a triumphant goal secured their well-earned victory. The jubilant cheers of fans reverberated throughout the arena, celebrating not just a win, but a testament to the unyielding spirit of these athletes. This remarkable feat will undoubtedly be remembered as a defining chapter in the team's legacy of excellence and determination.</p>
+        <p class="date">Posted on August 30, 2023</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-image">
+        <img src="./basketball/16230502114524.jpg" alt="News Image">
+      </div>
+      <div class="news-text">
+        <h3>New Rookie Shows Great Promise</h3>
+        <p>Our rookie player showcased impressive skills during the recent match.In a recent development, a promising newcomer has taken the spotlight in the world of sports. The rookie athlete's exceptional abilities were on full display during a recent match, leaving spectators and enthusiasts in awe. The performance not only demonstrated remarkable skills but also hinted at the potential for a bright future in the field. To learn more about this exciting revelation, interested individuals can follow the detailed account provided in the linked article. The news, dated August 28, 2023, stands as a testament to the continuous emergence of fresh talent within the realm of sports, promising new avenues of excitement and competition.    </p>
+        <p class="date">Posted on August 28, 2023</p>
+      </div>
+    </div>
+    <!-- Add more news items as needed -->
+  </div>
+  <footer class="footer">
+    &copy; 2023 Basketball Team. All rights reserved.
+  </footer>
+</body>
+</html>
